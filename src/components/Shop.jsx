@@ -25,7 +25,6 @@ function Shop() {
     return (
         <main className="container content">
             {loading ? <Preloader /> : <GoodsList goods={goods} />}
-            <span>a{API_KEY}</span>
         </main>
     );
 }
