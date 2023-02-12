@@ -10,6 +10,7 @@ function Shop() {
 
     useEffect(function getGoods() {
         fetch(API_URL, {
+            method: "GET",
             headers: {
                 Authorization: API_KEY,
             },
@@ -21,10 +22,10 @@ function Shop() {
             });
     }, []);
 
-    console.log(API_KEY);
     return (
         <main className="container content">
             {loading ? <Preloader /> : <GoodsList goods={goods} />}
+            <span>a{API_KEY}</span>
         </main>
     );
 }

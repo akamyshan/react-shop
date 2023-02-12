@@ -22,6 +22,19 @@ nav {
   gap: 1rem;  
 }
 
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-content {
+  flex-grow: 1;
+}
+
+.price {
+  font-size: 1.8rem;
+}
+
 /* .preloader {
   margin: 10% 0;
 } */
