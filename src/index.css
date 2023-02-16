@@ -35,6 +35,26 @@ nav {
   font-size: 1.8rem;
 }
 
+.cart {
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+
+  z-index: 10;
+  padding: 1rem;
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+
+@media (min-width: 767px) {
+  .cart {
+    top: 5rem;
+    bottom: unset;
+  }
+}
+
+
 /* .preloader {
   margin: 10% 0;
 } */
