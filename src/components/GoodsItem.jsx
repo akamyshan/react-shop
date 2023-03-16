@@ -1,8 +1,15 @@
 function GoodsItem(props) {
-    const { id, name, description, price, full_background } = props;
+    const {
+        id,
+        name,
+        description,
+        price,
+        full_background,
+        addToBasket = Function.prototype,
+    } = props;
 
     return (
-        <div className="card" id={id}>
+        <div className="card">
             <div className="card-image">
                 <img src={full_background} alt={name} />
             </div>
@@ -10,8 +17,16 @@ function GoodsItem(props) {
                 <span className="card-title">{name}</span>
                 <p>{description}</p>
             </div>
-            <div class="card-action">
-                <button className="btn">Купить</button>
+            <div className="card-action">
+                <button
+                    className="btn"
+                    onClick={() => {
+                        addToBasket({ id, name, price });
+                        console.log(`click on ${id}`);
+                    }}
+                >
+                    Купить
+                </button>
                 <span className="right price">{price} руб.</span>
             </div>
         </div>

@@ -23,7 +23,8 @@
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "plugin:react-hooks/recommended"
     ]
   },
   "browserslist": {
@@ -39,6 +40,7 @@
     ]
   },
   "devDependencies": {
+    "eslint-plugin-react-hooks": "^4.6.0",
     "gh-pages": "^5.0.0"
   },
   "description": "This project was made during the course [React for modern web applications](https://stepik.org/course/114197/syllabus) by [michey85](https://github.com/michey85)",
