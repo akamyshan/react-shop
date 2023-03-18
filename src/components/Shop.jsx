@@ -13,7 +13,6 @@ function Shop() {
     const [isBacketShow, setBasketShow] = useState(false);
 
     const addToBasket = (item) => {
-        console.log("inside addToBasket");
         const itemIndex = order.findIndex((element) => element.id === item.id);
         if (itemIndex < 0) {
             const newItem = { ...item, quantity: 1 };
@@ -36,6 +35,32 @@ function Shop() {
     const removeFromBasket = (itemId) => {
         const newOrder = order.filter((element) => element.id !== itemId);
         setOrder(newOrder);
+    };
+
+    const increaseQuantityItem = (itemId) => {
+        const modifiedOrder = order.map((element) => {
+            if (element.id === itemId) {
+                return {
+                    ...element,
+                    quantity: element.quantity + 1,
+                };
+            }
+            return element;
+        });
+        setOrder(modifiedOrder);
+    };
+
+    const decreaseQuantityItem = (itemId) => {
+        const modifiedOrder = order.map((element) => {
+            if (element.id === itemId) {
+                return {
+                    ...element,
+                    quantity: element.quantity - 1,
+                };
+            }
+            return element;
+        });
+        setOrder(modifiedOrder.filter((element) => element.quantity !== 0));
     };
 
     const handleBasketShow = () => {
@@ -69,6 +94,8 @@ function Shop() {
                     order={order}
                     handleBasketShow={handleBasketShow}
                     removeFromBasket={removeFromBasket}
+                    increaseQuantityItem={increaseQuantityItem}
+                    decreaseQuantityItem={decreaseQuantityItem}
                 />
             )}
         </main>

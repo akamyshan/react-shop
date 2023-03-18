@@ -22,7 +22,6 @@ function GoodsItem(props) {
                     className="btn"
                     onClick={() => {
                         addToBasket({ id, name, price });
-                        console.log(`click on ${id}`);
                     }}
                 >
                     Купить

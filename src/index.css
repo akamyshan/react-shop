@@ -79,6 +79,11 @@ nav {
   cursor: pointer;
 }
 
+.quantity-change {
+  color: #26a69a;
+  cursor: pointer;
+}
+
 /* .preloader {
   margin: 10% 0;
 } */
