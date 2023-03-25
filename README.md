@@ -6,4 +6,6 @@ To get a list of movies is used the api [fortniteapi.io](https://fortniteapi.io/
 
 [materialize](https://materializecss.com/about.html) is used for design.
 
-You can see it on GitHub Pages.
+You can see it on [GitHub Pages][def].
+
+[def]: https://akamyshan.github.io/react-shop
