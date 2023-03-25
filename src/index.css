@@ -85,10 +85,6 @@ nav {
   vertical-align: middle;
 }
 
-/* .preloader {
-  margin: 10% 0;
-} */
-
 @keyframes show {
   from {
     top: 70%;
