@@ -12,6 +12,7 @@ function Shop() {
     const [loading, setLoading] = useState(true);
     const [order, setOrder] = useState([]);
     const [isBacketShow, setBasketShow] = useState(false);
+    const [alertName, setAlertName] = useState("");
 
     const addToBasket = (item) => {
         const itemIndex = order.findIndex((element) => element.id === item.id);
@@ -31,6 +32,7 @@ function Shop() {
             });
             setOrder(newOrder);
         }
+        setAlertName(item.name);
     };
 
     const removeFromBasket = (itemId) => {
@@ -68,6 +70,10 @@ function Shop() {
         setBasketShow(!isBacketShow);
     };
 
+    const closeAlert = () => {
+        setAlertName("");
+    };
+
     useEffect(function getGoods() {
         fetch(API_URL, {
             method: "GET",
@@ -99,6 +105,7 @@ function Shop() {
                     decreaseQuantityItem={decreaseQuantityItem}
                 />
             )}
+            {alertName && <Alert name={alertName} closeAlert={closeAlert} />}
         </main>
     );
 }
