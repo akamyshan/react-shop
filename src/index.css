@@ -82,6 +82,7 @@ nav {
 .quantity-change {
   color: #26a69a;
   cursor: pointer;
+  vertical-align: middle;
 }
 
 /* .preloader {
