@@ -13,7 +13,7 @@ function GoodsList() {
     return (
         <div className="goods">
             {goods.map((item) => (
-                <GoodsItem key={item.id} {...item} />
+                <GoodsItem key={item.mainId} {...item} />
             ))}
         </div>
     );

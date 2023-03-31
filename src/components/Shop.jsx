@@ -22,7 +22,7 @@ function Shop() {
         })
             .then((response) => response.json())
             .then((data) => {
-                setGoods(data.featured);
+                setGoods(data.shop);
             });
         // eslint-disable-next-line
     }, []);
