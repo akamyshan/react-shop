@@ -10,7 +10,7 @@ import { BasketList } from "./BasketList";
 import { Alert } from "./Alert";
 
 function Shop() {
-    const { loading, order, isBacketShow, alertName, setGoods } =
+    const { loading, order, isBasketShow, alertName, setGoods } =
         useContext(ShopContext);
 
     useEffect(function getGoods() {
@@ -31,7 +31,7 @@ function Shop() {
         <main className="container content">
             <Cart quantity={order.length} />
             {loading ? <Preloader /> : <GoodsList />}
-            {isBacketShow && <BasketList />}
+            {isBasketShow && <BasketList />}
             {alertName && <Alert />}
         </main>
     );
